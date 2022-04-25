@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let playerName = prompt("Choisissez votre pseudo");
+       const random = Math.floor(Math.random() * 100)+1;
+       let playerWin = false;
+
+       function play() {
+            let playerNumber = parseInt(prompt("Choisissez un chiffre entre 1 et 100"));
+            if(playerNumber == random){
+                console.log("Bravo " + playerName + " vous avez trouvé");
+                playerWin = true;
+                }
+            else if (playerNumber > random){
+                console.log("Votre chiffre est superieur au chiffre mystère");
+                
+            }
+            else{
+                console.log("Votre chiffre est inferieur au chiffre mystère");
+                
+            }
+
+       }
+       while(playerWin == false){
+           play();
+       }
+
+    </script>
+    
+</body>
+</html>
